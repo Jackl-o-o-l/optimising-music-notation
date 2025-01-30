@@ -24,7 +24,7 @@ public class Rest implements Whitespace {
         MusicalPosition pulsePosition;
         for (PulseLine p: line.getPulseLines()) {
             pulsePosition = p.getMusicalPosition();
-            if(pulsePosition.compareTo(startMusicalPosition)>=0 && pulsePosition.compareTo(endMusicalPosition)<=0){
+            if(pulsePosition.compareTo(startMusicalPosition) > 0 && pulsePosition.compareTo(endMusicalPosition) < 0){
                 p.drawFull(canvas, startMusicalPosition.stave());
             }
         }
